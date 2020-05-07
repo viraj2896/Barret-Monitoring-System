@@ -1,0 +1,22 @@
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Position</th>
+      <th scope="col">Room</th>
+      <th scope="col">Gateway</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each sensors}}
+      <tr>
+        <td scope="row">{{this.name}}</td>
+        <td>{{this.position}}</td>
+        <td>{{this.room.name}}</td>
+        <td>{{this.gateway.name}}</td>
+        <td><button onclick="loadUpdateSensor('{{this.id}}')" type="button" class="btn btn-primary">Update</button></td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

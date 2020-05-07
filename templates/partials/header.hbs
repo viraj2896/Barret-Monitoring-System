@@ -1,0 +1,99 @@
+
+<header>
+  
+  <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Organizations</a>
+      <div class="dropdown-menu">
+         {{#each organizations}}
+            <a id="organization-{{this.id}}" class="dropdown-item org-menu-item" data-toggle="tab" href="#organizationsDiv" onclick="organizationSelected('{{this.id}}')">{{this.name}}</a>
+         {{/each}}
+        <div class="dropdown-divider"></div>
+        <a id="addNewOrganization" class="dropdown-item" href="#">Add new</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="rooms-tab" data-toggle="tab" href="#roomsDiv" role="tab" aria-controls="profile" aria-selected="false">Rooms</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="gateways-tab" data-toggle="tab" href="#gatewaysDiv" role="tab" aria-controls="messages" aria-selected="false">Gateways</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sensors</a>
+      <div class="dropdown-menu">
+        <a class="nav-link" id="sensors-tab" data-toggle="tab" href="#sensorsDiv" role="tab" aria-controls="settings" aria-selected="false">Sensors</a>
+        <div class="dropdown-divider"></div>
+        <a id="addNewSensor" class="dropdown-item" href="#">Add new</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Options</a>
+      <div class="dropdown-menu">
+        <a id="btn-sign-out" class="dropdown-item" href="#">Sign out</a>
+        <a id="btn-sign-out-all-sessions" class="dropdown-item" href="#">Sign out from all sessions</a>
+      </div>
+    </li>
+  </ul>
+ 
+
+       
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+            <!-- Nav Item - Alerts -->
+            
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell fa-fw"></i>
+                <!-- Counter - Alerts -->
+                <span class="badge badge-danger badge-counter">Alerts</span>
+              </a>
+              <!-- Dropdown - Alerts -->
+              
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header">
+                  Alerts Center
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#alertsDiv" id="addNewAlert" >
+                  <div class="mr-3">
+                    <div class="icon-circle bg-primary">
+                      <i class="fas fa-file-alt text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500"></div>
+                    <span class="font-weight-bold">Create Alert</span>
+                  </div>
+                </a>
+                
+                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+              </div>
+            </li>
+            
+             </ul>
+</nav>
+ <style>
+   h1 {
+     display: inline;
+     position: relative;
+     font: 200px Helvetica, Sans-Serif;
+     letter-spacing: -5px;
+     color: rgba(0,0,255,0.5);
+   }
+   
+ </style>
+  <!-- Tab panes -->
+  <h1 class="display-4" id="main-title"></h1>
+  <div class="tab-content">
+    <div class="tab-pane" id="organizationsDiv" role="tabpanel" aria-labelledby="profile-tab"> </div>
+    <div class="tab-pane" id="roomsDiv" role="tabpanel" aria-labelledby="messages-tab"> </div>
+    <div class="tab-pane" id="gatewaysDiv" role="tabpanel" aria-labelledby="settings-tab"> </div>
+    <div class="tab-pane active" id="sensorsDiv" role="tabpanel" aria-labelledby="home-tab"> </div>
+  </div>
+</header>

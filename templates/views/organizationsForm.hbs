@@ -1,0 +1,15 @@
+<div id="organizationFormSuccessAlert" style="display: none" class="alert alert-success" role="alert">
+  Success! 
+</div>
+<form id="organizationsForm">
+  <input type="hidden" class="form-control" id="inputOrganizationId" value="{{organization._id}}">
+  <div class="form-group row">
+    <label for="name" class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputOrganizationName" value="{{organization.name}}">
+    </div>
+  </div>
+  <button id="btnUpdateOrganization" type="button" class="btn btn-primary">Update</button>
+  <button id="btnDeleteOrganization" type="button" class="btn btn-danger">Delete</button>
+  <button id="btnAddOrganization" type="button" class="btn btn-primary">Add</button>
+</form>
