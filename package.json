@@ -22,7 +22,7 @@
     "mongoose": "^5.8.9",
     "path": "^0.12.7",
     "redis": "^2.8.0",
-    "validator": "^12.1.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
